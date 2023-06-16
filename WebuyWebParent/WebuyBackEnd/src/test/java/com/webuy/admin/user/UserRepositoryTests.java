@@ -66,25 +66,33 @@ public class UserRepositoryTests {
 //		assertThat(userLong).isNotNull();
 //	}
 	
-	@Test
-	public void testUpdateRole() {
-		User userPhuong = userRepository.findById(2).get();
-		Role roleEditor = new Role(3);
-		Role roleSaleperson = new Role(2);
-		userPhuong.getRoles().remove(roleEditor); // remove role editor
-		userPhuong.addRole(roleSaleperson);// add role sale person
-		
-		userRepository.save(userPhuong);
-	}
+//	@Test
+//	public void testUpdateRole() {
+//		User userPhuong = userRepository.findById(2).get();
+//		Role roleEditor = new Role(3);
+//		Role roleSaleperson = new Role(2);
+//		userPhuong.getRoles().remove(roleEditor); // remove role editor
+//		userPhuong.addRole(roleSaleperson);// add role sale person
+//		
+//		userRepository.save(userPhuong);
+//	}
+	
+//	@Test
+//	public void testDeleteUser() {
+//		//User userPhuong = userRepository.findById(2).get();
+//		//userRepository.delete(userPhuong);
+//		
+//		userRepository.deleteById(2);
+//		
+//		//userRepository.findById(2);
+//	}
 	
 	@Test
-	public void testDeleteUser() {
-		//User userPhuong = userRepository.findById(2).get();
-		//userRepository.delete(userPhuong);
+	 public void testGetUserByEmail() {
+		String email = "longkakapro2000@gmail.com";
+		User user = userRepository.getUserByEmail(email);
 		
-		userRepository.deleteById(2);
-		
-		//userRepository.findById(2);
+		assertThat(user).isNotNull();
 	}
 	
 	

@@ -44,5 +44,13 @@ public class UserService {
 //	public void encodePW(User user) {
 //
 //	}
+	
+	//check email unique
+	public boolean isEmailUnique(String email) {
+		
+		User user = userRepository.getUserByEmail(email);
+		
+		return user == null;
+	}
 
 }
