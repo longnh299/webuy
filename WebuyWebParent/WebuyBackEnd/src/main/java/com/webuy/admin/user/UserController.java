@@ -3,6 +3,7 @@ package com.webuy.admin.user;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ansi.AnsiOutput.Enabled;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -85,6 +86,18 @@ public class UserController {
 		
 		return "redirect:/users"; 
 		
+	}
+	
+	@GetMapping("/users/{id}/enabled/{status}")
+	public String updateUserStatusController(@PathVariable("id") Integer id, @PathVariable("status") boolean status, RedirectAttributes redirectAttributes) {
+		userService.updateUserStatus(id, status);
+		
+		String s = status ? "enabled" : "disabled";
+		String message = "The user ID " + id + "has been " + status;
+		
+		redirectAttributes.addFlashAttribute("message", message);
+		
+		return "redirect:/users"; 
 	}
 	
 	

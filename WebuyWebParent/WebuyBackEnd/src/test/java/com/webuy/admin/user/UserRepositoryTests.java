@@ -95,12 +95,17 @@ public class UserRepositoryTests {
 //		assertThat(user).isNotNull();
 //	}
 	
+//	@Test
+//	public void testCountId() {
+//		Integer id = 1;
+//		Long countById = userRepository.countById(id);
+//		
+//		assertThat(countById).isNotNull().isGreaterThan(0);
+//	}
+	
 	@Test
-	public void testCountId() {
-		Integer id = 1;
-		Long countById = userRepository.countById(id);
-		
-		assertThat(countById).isNotNull().isGreaterThan(0);
+	public void testDisabled() {
+		userRepository.updateStatus(9, false);
 	}
 	
 	
