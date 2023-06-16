@@ -1,6 +1,7 @@
 package com.webuy.admin.user;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -35,8 +36,22 @@ public class UserService {
 	
 	//save user into db
 	public void save(User user) {
-		String encodepw = passwordEncoder.encode(user.getPassword());
-		user.setPassword(encodepw);
+		
+		boolean isUpdating = (user.getId() != null); // khac null thi dang update
+		if(isUpdating) {
+			User userDetail = userRepository.findById(user.getId()).get();
+			if(user.getPassword().isEmpty()) {
+				user.setPassword(userDetail.getPassword());
+			} else {
+				String encodepass = passwordEncoder.encode(user.getPassword());
+				user.setPassword(encodepass);
+			}
+			
+		} else {
+			String encodepw = passwordEncoder.encode(user.getPassword());
+			user.setPassword(encodepw);
+		}
+		
 		userRepository.save(user);
 	}
 	
@@ -46,11 +61,33 @@ public class UserService {
 //	}
 	
 	//check email unique
-	public boolean isEmailUnique(String email) {
+	public boolean isEmailUnique(Integer id, String email) {
+		User userByEmail = userRepository.getUserByEmail(email);
 		
-		User user = userRepository.getUserByEmail(email);
+		if (userByEmail == null) return true;
 		
-		return user == null;
+		boolean isCreatingNew = (id == null);
+		
+		if (isCreatingNew) {
+			if (userByEmail != null) return false;
+		} else {
+			if (userByEmail.getId() != id) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public User getUser(Integer id) throws UserNotFoundException {
+		
+		try {
+			return userRepository.findById(id).get();
+		} catch (NoSuchElementException e) {
+			// TODO: handle exception
+			throw new UserNotFoundException("Could not find any user with ID " + id);
+		}
+		
 	}
 
 }
