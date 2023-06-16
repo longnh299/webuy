@@ -87,12 +87,20 @@ public class UserRepositoryTests {
 //		//userRepository.findById(2);
 //	}
 	
+//	@Test
+//	 public void testGetUserByEmail() {
+//		String email = "longkakapro2000@gmail.com";
+//		User user = userRepository.getUserByEmail(email);
+//		
+//		assertThat(user).isNotNull();
+//	}
+	
 	@Test
-	 public void testGetUserByEmail() {
-		String email = "longkakapro2000@gmail.com";
-		User user = userRepository.getUserByEmail(email);
+	public void testCountId() {
+		Integer id = 1;
+		Long countById = userRepository.countById(id);
 		
-		assertThat(user).isNotNull();
+		assertThat(countById).isNotNull().isGreaterThan(0);
 	}
 	
 	
