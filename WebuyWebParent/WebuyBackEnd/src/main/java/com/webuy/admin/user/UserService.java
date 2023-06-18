@@ -38,7 +38,7 @@ public class UserService {
 	}
 	
 	//save user into db
-	public void save(User user) {
+	public User save(User user) {
 		
 		boolean isUpdating = (user.getId() != null); // khac null thi dang update
 		if(isUpdating) {
@@ -55,7 +55,7 @@ public class UserService {
 			user.setPassword(encodepw);
 		}
 		
-		userRepository.save(user);
+		return userRepository.save(user);
 	}
 	
 	// encode password

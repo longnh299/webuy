@@ -1,17 +1,22 @@
 package com.webuy.admin.user;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiOutput.Enabled;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.webuy.admin.FileUploadedUtil;
 import com.webuy.common.entity.Role;
 import com.webuy.common.entity.User;
 
@@ -45,9 +50,24 @@ public class UserController {
 	
 	//save user controller
 	@PostMapping("/users/save")
-	public String saveUser(User user, RedirectAttributes redirectAttributes) {
+	public String saveUser(User user, RedirectAttributes redirectAttributes, @RequestParam("image") MultipartFile multipartFile) throws IOException {
 		//System.out.println(user);
-		userService.save(user);
+		//System.out.println(multipartFile.getOriginalFilename());
+		if(!multipartFile.isEmpty()) {
+			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+			user.setPhotos(fileName);
+			User savedUser = userService.save(user);
+			String uploadDir = "user-photos/" + savedUser.getId();
+			
+			FileUploadedUtil.cleanDir(uploadDir); // clean dir before upload
+			FileUploadedUtil.saveFile(uploadDir, fileName, multipartFile);			
+		} else {
+			if(user.getPhotos().isEmpty()) 
+				user.setPhotos(null);
+			userService.save(user);
+		}
+
+		//userService.save(user);
 		
 		redirectAttributes.addFlashAttribute("message", "The user has been saved successfully!");
 		return "redirect:/users";
@@ -93,7 +113,7 @@ public class UserController {
 		userService.updateUserStatus(id, status);
 		
 		String s = status ? "enabled" : "disabled";
-		String message = "The user ID " + id + "has been " + status;
+		String message = "The user ID " + id + " has been " + s;
 		
 		redirectAttributes.addFlashAttribute("message", message);
 		
