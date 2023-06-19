@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiOutput.Enabled;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -28,12 +29,18 @@ public class UserController {
 	private UserService userService;
 	
 	//list all users controller
+//	@GetMapping("/users")
+//	public String listAllUsers(Model model) {
+//		
+//		List<User> listUsers = userService.listAllUsers();
+//		model.addAttribute("listUsers", listUsers);
+//		return "users";
+//	}
+	
+	// default get page 1
 	@GetMapping("/users")
-	public String listAllUsers(Model model) {
-		
-		List<User> listUsers = userService.listAllUsers();
-		model.addAttribute("listUsers", listUsers);
-		return "users";
+	public String listUserFirstPage(Model model) {
+		return listByPage(1, model);
 	}
 	
 	//create new user controller
@@ -118,6 +125,33 @@ public class UserController {
 		redirectAttributes.addFlashAttribute("message", message);
 		
 		return "redirect:/users"; 
+	}
+	
+	//get first page
+	//get page by page number controller
+	@GetMapping("/users/page/{pageNum}")
+	public String listByPage(@PathVariable int pageNum, Model model) {
+		
+		Page<User> pageUser = userService.listByPage(pageNum);
+//		System.out.println("total elements: " + pageUser.getTotalElements());
+//		System.out.println("total pages: " + pageUser.getTotalPages());
+		/*
+		 // use for case id increse 1: 1 2 3 4 5 6 7 8 9 ....
+		long startId = (pageNum - 1) * userService.GetPageSize() + 1;
+		long endId = startId + userService.GetPageSize() - 1;
+		if(endId > pageUser.getTotalElements()) {
+			endId = pageUser.getTotalElements();
+		}
+		*/
+		
+		
+		List<User> listUsers = pageUser.getContent();
+		model.addAttribute("totalElements", pageUser.getTotalElements());
+		model.addAttribute("totalPages", pageUser.getTotalPages());
+		model.addAttribute("currentPage", pageNum);
+		model.addAttribute("listUsers", listUsers);
+		
+		return "users";
 	}
 	
 	
