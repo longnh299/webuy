@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiOutput.Enabled;
 import org.springframework.data.domain.Page;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -40,7 +41,7 @@ public class UserController {
 	// default get page 1
 	@GetMapping("/users")
 	public String listUserFirstPage(Model model) {
-		return listByPage(1, model);
+		return listByPage(1, model, "firstName", "asc");
 	}
 	
 	//create new user controller
@@ -130,9 +131,11 @@ public class UserController {
 	//get first page
 	//get page by page number controller
 	@GetMapping("/users/page/{pageNum}")
-	public String listByPage(@PathVariable int pageNum, Model model) {
+	public String listByPage(@PathVariable int pageNum, Model model, @Param("sortField") String sortField, @Param("sortDir") String sortDir) {
 		
-		Page<User> pageUser = userService.listByPage(pageNum);
+		System.out.println("Sort field: " + sortField);
+		System.out.println("Sort Order: " + sortDir);
+		Page<User> pageUser = userService.listByPage(pageNum, sortField, sortDir);
 //		System.out.println("total elements: " + pageUser.getTotalElements());
 //		System.out.println("total pages: " + pageUser.getTotalPages());
 		/*
@@ -144,12 +147,24 @@ public class UserController {
 		}
 		*/
 		
+		String reverseSortDir = null;
+		
+		if (sortDir.equals("asc")) {
+			
+			reverseSortDir = "desc";
+			
+		} else {
+			reverseSortDir = "asc";
+		}
 		
 		List<User> listUsers = pageUser.getContent();
 		model.addAttribute("totalElements", pageUser.getTotalElements());
 		model.addAttribute("totalPages", pageUser.getTotalPages());
 		model.addAttribute("currentPage", pageNum);
 		model.addAttribute("listUsers", listUsers);
+		model.addAttribute("sortField", sortField);
+		model.addAttribute("sortDir", sortDir);
+		model.addAttribute("reverseSortDir", reverseSortDir);
 		
 		return "users";
 	}
