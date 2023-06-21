@@ -133,8 +133,8 @@ public class UserController {
 	@GetMapping("/users/page/{pageNum}")
 	public String listByPage(@PathVariable int pageNum, Model model, @Param("sortField") String sortField, @Param("sortDir") String sortDir) {
 		
-		System.out.println("Sort field: " + sortField);
-		System.out.println("Sort Order: " + sortDir);
+		//System.out.println("Sort field: " + sortField);
+		//System.out.println("Sort Order: " + sortDir);
 		Page<User> pageUser = userService.listByPage(pageNum, sortField, sortDir);
 //		System.out.println("total elements: " + pageUser.getTotalElements());
 //		System.out.println("total pages: " + pageUser.getTotalPages());
