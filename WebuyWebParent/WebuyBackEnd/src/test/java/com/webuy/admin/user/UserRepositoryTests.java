@@ -112,20 +112,36 @@ public class UserRepositoryTests {
 //		userRepository.updateStatus(9, false);
 //	}
 	
+//	@Test
+//	public void testGetFirstPage() {
+//		int pageNum = 1;
+//		int pageSize = 4;
+//		
+//		Pageable pageable = PageRequest.of(pageNum, pageSize);
+//		Page<User> pageUser = userRepository.findAll(pageable);
+//		
+//		List<User> list = pageUser.getContent();
+//		
+//		list.forEach(user -> System.out.println(user));
+//		
+//		assertThat(list.size()).isEqualTo(pageSize);
+//		
+//		
+//	}
+	
 	@Test
-	public void testGetFirstPage() {
-		int pageNum = 1;
+	public void testSearch() {
+		String keyword = "kr";
+		int pageNum = 0;
 		int pageSize = 4;
 		
 		Pageable pageable = PageRequest.of(pageNum, pageSize);
-		Page<User> pageUser = userRepository.findAll(pageable);
+		Page<User> pageUser = userRepository.findAll(keyword, pageable);
 		
 		List<User> list = pageUser.getContent();
 		
 		list.forEach(user -> System.out.println(user));
-		
-		assertThat(list.size()).isEqualTo(pageSize);
-		
+		assertThat(list.size()).isGreaterThan(0);
 		
 	}
 	

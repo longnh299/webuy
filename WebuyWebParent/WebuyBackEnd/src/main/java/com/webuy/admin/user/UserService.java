@@ -120,11 +120,15 @@ public class UserService {
 	}
 	
 	// list page user by page number
-	public Page<User> listByPage(int pageNum, String sortField, String sortDir){
+	public Page<User> listByPage(int pageNum, String sortField, String sortDir, String keyword){
 		
 		Sort sort = Sort.by(sortField); // sort by field
 		sort = sortDir.equals("asc") ? sort.ascending() : sort.descending();
 		Pageable pageable = PageRequest.of(pageNum - 1, PAGE_SIZE, sort);
+		
+		if (keyword != null) {
+			return userRepository.findAll(keyword, pageable);
+		}
 		
 		Page<User> pageUser = userRepository.findAll(pageable);
 		
