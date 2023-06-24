@@ -16,8 +16,9 @@ import com.webuy.common.entity.User;
 import jakarta.servlet.http.HttpServletResponse;
 
 //export csv service
-public class CsvExport {
+public class CsvExport implements ExportInterface {
 	
+	@Override
 	public void exportInfo(List<User> listUsers, HttpServletResponse response) throws IOException {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 		
