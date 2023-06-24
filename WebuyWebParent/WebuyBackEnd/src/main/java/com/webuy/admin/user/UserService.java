@@ -38,6 +38,8 @@ public class UserService {
 	//list all users service
 	public List<User> listAllUsers(){
 		return (List<User>) userRepository.findAll();
+		
+		//return (List<User>) userRepository.findAll(Sort.by("firstName").ascending()); // if want to get list user by firstName asc order
 	}
 	
 	//get all roles in db

@@ -22,6 +22,8 @@ import com.webuy.admin.FileUploadedUtil;
 import com.webuy.common.entity.Role;
 import com.webuy.common.entity.User;
 
+import jakarta.servlet.http.HttpServletResponse;
+
 
 @Controller
 public class UserController {
@@ -170,6 +172,14 @@ public class UserController {
 		model.addAttribute("keyword", keyword);
 		
 		return "users";
+	}
+	
+	// export to csv controller
+	@GetMapping("/users/export/csv")
+	public void exportCSV(HttpServletResponse response) throws IOException {
+		
+		CsvExport csvExport = new CsvExport();
+		csvExport.exportInfo(userService.listAllUsers(), response);
 	}
 	
 	
