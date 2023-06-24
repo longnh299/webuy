@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.lowagie.text.DocumentException;
 import com.webuy.admin.FileUploadedUtil;
 import com.webuy.common.entity.Role;
 import com.webuy.common.entity.User;
@@ -189,6 +190,14 @@ public class UserController {
 		ExcelExport excelExport = new ExcelExport();
 		
 		excelExport.exportInfo(userService.listAllUsers(), response);
+	}
+	
+	//export to pdf controller
+	@GetMapping("/users/export/pdf")
+	public void exportPdf(HttpServletResponse response) throws DocumentException, IOException {
+		PdfExport pdfExport = new PdfExport();
+		
+		pdfExport.exportInfo(userService.listAllUsers(), response);
 	}
 	
 	
