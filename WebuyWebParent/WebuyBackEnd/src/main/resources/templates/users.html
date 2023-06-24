@@ -92,15 +92,15 @@
 					<thead class="thead-dark">
 						<tr>
 
-							<th th:replace="fragments :: column_property('id', 'User ID')" />
+							<th th:replace="~{fragments :: column_property('id', 'User ID')}" />
 
 							<th>Photos</th>
 							
-							<th th:replace="fragments :: column_property('email', 'Email')"/>
+							<th th:replace="~{fragments :: column_property('email', 'Email')}"/>
 							
-							<th th:replace="fragments :: column_property('firstName', 'First Name')"/>
+							<th th:replace="~{fragments :: column_property('firstName', 'First Name')}"/>
 					
-							<th th:replace="fragments :: column_property('lastName', 'Last Name')"/>
+							<th th:replace="~{fragments :: column_property('lastName', 'Last Name')}"/>
 							
 							<th>Roles</th>
 							<th>Enabled</th>
@@ -149,19 +149,19 @@
 				<nav>
 					<ul class="pagination justify-content-center">
 					  <li th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
-						  <a th:replace="fragments :: paging_property(1 , 'First')" />
+						  <a th:replace="~{fragments :: paging_property(1 , 'First')}" />
 					  </li>
 					  <li th:class="${currentPage > 1 ? 'page-item' : 'page-item disabled'}">
-						 <a th:replace="fragments :: paging_property(${currentPage - 1} , 'Previous')" />
+						 <a th:replace="~{fragments :: paging_property(${currentPage - 1} , 'Previous')}" />
 					  </li>
 					  <li th:class="${currentPage != i ? 'page-item' : 'page-item active'}" th:each="i : ${#numbers.sequence(1, totalPages)}">
-						  <a th:replace="fragments :: paging_property(${i} , ${i})" />
+						  <a th:replace="~{fragments :: paging_property(${i} , ${i})}" />
 					  </li>
 					  <li th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
-						 <a th:replace="fragments :: paging_property(${currentPage + 1} , 'Next')" />
+						 <a th:replace="~{fragments :: paging_property(${currentPage + 1} , 'Next')}" />
 					  </li>
 					  <li th:class="${currentPage < totalPages ? 'page-item' : 'page-item disabled'}">
-						  <a th:replace="fragments :: paging_property(${totalPages} , 'Last')" />
+						  <a th:replace="~{fragments :: paging_property(${totalPages} , 'Last')}" />
 					  </li> 
 					</ul>
 				</nav>
