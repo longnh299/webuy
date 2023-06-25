@@ -4,7 +4,7 @@
 		<meta charset="ISO-8859-1">
 	</head>
 	<body>
-		<th th:fragment="column_property(field, columnTitle)">
+		<th th:fragment="column_property(field, columnTitle, removeColumn)" th:remove="${removeColumn}">
 			<a class="text-white"
 			th:href="@{'/users/page/' + ${currentPage} + '?sortField=' + ${field} + '&sortDir=' + ${sortField != field ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">
 			[[${columnTitle}]]
@@ -19,7 +19,7 @@
 		
 		<!--
 		<a th:fragment="enabled_property(user_id, isEnable)"  th:class="${isEnable} == true ? fas fa-check-circle fa-2x icon-green : fas fa-check-circle fa-2x icon-dark" 
-		th:href="@{'/users/' + ${user_id} + '/enabled/' + ${isEnable == true ? false : true}}" th:title="${isEnable} == true ? disabled this user : enabled this user"></a>
-		-->
+		th:href="@{'/users/' + ${user_id} + '/enabled/' + ${${isEnable} == true ? false : true}}" th:title="${isEnable} == true ? disabled this user : enabled this user"></a> -->
+		
 	</body>
 </html>
