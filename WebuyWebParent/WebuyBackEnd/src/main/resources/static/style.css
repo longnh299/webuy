@@ -3,3 +3,22 @@
 *.icon-green {color: green}
 *.icon-dark {color: gray}
 *.icon-red {color: red}
+
+@media screen and (max-width: 768px){
+	/* small screen */
+	div.full-info {display: none}
+	div.less-info {display: block}
+	
+}
+
+@media sceen and (min-width: 768px) and (max-width: 1024px){
+	/* medium screen*/
+	div.full-info {display: block}
+	div.less-info {display: none}
+	
+}
+
+@media screen and (min-width: 1024px){
+	/* full screen*/
+	div.less-info {display: none}
+}

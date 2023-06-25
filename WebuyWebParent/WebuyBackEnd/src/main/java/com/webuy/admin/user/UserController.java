@@ -200,6 +200,4 @@ public class UserController {
 		pdfExport.exportInfo(userService.listAllUsers(), response);
 	}
 	
-	
-	
 }

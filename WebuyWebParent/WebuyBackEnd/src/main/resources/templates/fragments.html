@@ -16,5 +16,10 @@
 		th:href="@{'/users/page/' + ${page} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">
 		[[${title}]]
 		</a>
+		
+		<!--
+		<a th:fragment="enabled_property(user_id, isEnable)"  th:class="${isEnable} == true ? fas fa-check-circle fa-2x icon-green : fas fa-check-circle fa-2x icon-dark" 
+		th:href="@{'/users/' + ${user_id} + '/enabled/' + ${isEnable == true ? false : true}}" th:title="${isEnable} == true ? disabled this user : enabled this user"></a>
+		-->
 	</body>
 </html>
