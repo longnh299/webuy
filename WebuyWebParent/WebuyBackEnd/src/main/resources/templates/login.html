@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-with,initial-scale,minimum-scale=1.0">
+		<title>Login - Webuy Admin</title>
+		
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+		<script rel="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+		<script rel="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+   		
+	</head>
+	
+	<body>
+		<div class="container-fluid text-center">
+			
+			<div>
+				<img th:src="@{/images/ShopmeAdminSmall.png}" />
+			</div>
+			
+			<form th:action="@{/login}" method="post" style="max-width: 450px; margin: 0 auto">
+				
+				<div class="border border-secondary rounded p-4">
+					<p>Buy together in Webuy</p>
+					<p>
+						<input type="email" name="email" placeholder="Email" class="form-control" required />
+					</p>
+					<p>
+						<input type="password" name="password" placeholder="Password" class="form-control" required />
+					</p>
+					
+					<p>
+						<input type="submit" value="Login" class="btn btn-primary" />
+					</p>
+				</div>
+				
+			</form>
+			
+			<div class="text-center">
+				<p>Webuy Control Panel - Copyright &copy; Webuy</p>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
