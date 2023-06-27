@@ -20,6 +20,10 @@
 			
 			<form th:action="@{/login}" method="post" style="max-width: 450px; margin: 0 auto">
 				
+				<div th:if="${param.error}">
+					<p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+				</div>
+				
 				<div class="border border-secondary rounded p-4">
 					<p>Buy together in Webuy</p>
 					<p>
