@@ -69,5 +69,17 @@ public class WebuyUserDetail implements UserDetails {
 		return user.isEnabled();
 	}
 	
+	public String getImagePath() {
+		if (this.user.getId() == null || this.user.getPhotos() == null) {
+			return "/images/default.png";
+		}
+		
+		return "/user-photos/" + this.user.getId() + "/" + this.user.getPhotos();
+	}
+	
+	public String getFullname() {
+		return this.user.getFirstName() + " " + this.user.getLastName();
+	}
+	
 	
 }
