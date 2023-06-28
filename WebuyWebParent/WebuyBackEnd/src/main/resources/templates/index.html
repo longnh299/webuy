@@ -15,7 +15,6 @@
 	
 	<body>
 		<div class="container-fluid">
-			
 			<div>
 				<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
 					<a class="navbar-brand" th:href="@{/}"> 
@@ -70,14 +69,14 @@
 								sec:authentication="principal.Fullname"
 								data-toggle="dropdown"></a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="">Logout</a>
+									<a class="dropdown-item" href="" id="logoutLink">Logout</a>
 								</div>
 							</li>
-			
-
-						
 					</div>
 				</nav>
+				<form th:action="@{/logout}" method="post" th:hidden="true" name="logoutFormModal">
+					<input type="submit" />
+				</form>
 			</div>
 			
 			<div>
@@ -89,6 +88,15 @@
 			</div>
 			
 		</div>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#logoutLink").on("click", function(event) {
+					event.preventDefault();
+					document.logoutFormModal.submit();
+				});
+			});
+		</script>
 		
 	</body>
 </html>

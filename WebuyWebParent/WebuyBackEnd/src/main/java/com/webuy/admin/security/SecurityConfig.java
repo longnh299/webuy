@@ -57,7 +57,8 @@ public class SecurityConfig {
 	.formLogin()
 		.loginPage("/login")
 		.usernameParameter("email")
-		.permitAll();
+		.permitAll()
+	.and().logout().permitAll();
 	return http.build();
 	}
 	
