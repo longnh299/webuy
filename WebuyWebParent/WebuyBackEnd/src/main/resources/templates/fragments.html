@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="ISO-8859-1">
+	<head th:fragment="page_header(page_title)">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-with,initial-scale,minimum-scale=1.0">
+		<title>[[${page_title}]]</title>
+		
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/fontas/all.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+		<script rel="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+		<script rel="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+   		
 	</head>
 	<body>
 		<th th:fragment="column_property(field, columnTitle, removeColumn)" th:remove="${removeColumn}">
