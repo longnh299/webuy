@@ -58,7 +58,8 @@ public class SecurityConfig {
 		.loginPage("/login")
 		.usernameParameter("email")
 		.permitAll()
-	.and().logout().permitAll();
+	.and().logout().permitAll()
+	.and().rememberMe().key("toilanguyenhoanglongtoilanguyenhoanglong").tokenValiditySeconds(7 * 24 * 60 * 60); // use fixed key to when restart app , old cookie can be used, default cookies time is 14 days
 	return http.build();
 	}
 	
