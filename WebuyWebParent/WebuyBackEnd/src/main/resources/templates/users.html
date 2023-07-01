@@ -206,8 +206,26 @@
 					event.preventDefault();
 					document.logoutFormModal.submit();
 				});
+				customDropDown();
 			});
 		</script>
+		
+	<script type="text/javascript"> 
+		function customDropDown(){
+			$(".navbar .dropdown").hover(
+				function(){
+					$(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+				},
+				function(){
+					$(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+				}
+				);
+			$(".dropdown > a").click(function() {
+				location.href = this.href;
+			});
+		}
+		
+	</script>
 		
 	</body>
 </html>

@@ -81,5 +81,15 @@ public class WebuyUserDetail implements UserDetails {
 		return this.user.getFirstName() + " " + this.user.getLastName();
 	}
 	
+	public void setFirstName(String firstName) {
+		user.setFirstName(firstName);
+	}
+	
+	public void setLastName(String lastName) {
+		user.setLastName(lastName);
+	}
+	
+	
+	
 	
 }

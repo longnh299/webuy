@@ -137,6 +137,29 @@ public class UserService {
 		return pageUser;
 	}
 	
+	public User getUserByEmail(String email) {
+		return userRepository.getUserByEmail(email);
+	}
+	
+	// update user infomation when user change info from account_detail.html
+	public User updateAccountDetail(User userAccount) {
+		User userDatabase = userRepository.findById(userAccount.getId()).get();
+		
+		if (!userAccount.getPassword().isEmpty()) {
+			String encodePassword = passwordEncoder.encode(userAccount.getPassword());
+			userDatabase.setPassword(encodePassword);
+		}
+		
+		if (userAccount.getPhotos() != null) {
+			userDatabase.setPhotos(userAccount.getPhotos());
+		}
+		
+		userDatabase.setFirstName(userAccount.getFirstName());
+		userDatabase.setLastName(userAccount.getLastName());
+		
+		return userRepository.save(userDatabase);
+	}
+	
 	
 
 }
