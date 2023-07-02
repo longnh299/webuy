@@ -9,6 +9,9 @@
 			
 			<div>
 				<h1>Welcome to webuy admin</h1>
+				Welcome <a sec:authentication="principal.Fullname" th:href="@{/account}"></a>
+				&nbsp;
+				<span sec:authentication="principal.authorities"></span>
 			</div>
 			
 			<div class="text-center">
