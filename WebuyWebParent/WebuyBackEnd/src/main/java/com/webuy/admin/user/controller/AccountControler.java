@@ -1,4 +1,4 @@
-package com.webuy.admin.user;
+package com.webuy.admin.user.controller;
 
 import java.io.IOException;
 
@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.webuy.admin.FileUploadedUtil;
 import com.webuy.admin.security.WebuyUserDetail;
+import com.webuy.admin.user.UserService;
 import com.webuy.common.entity.User;
 
 @Controller
@@ -31,7 +32,7 @@ public class AccountControler {
 		
 		model.addAttribute("user", user);
 		
-		return "account_detail";
+		return "/user-template/account_detail";
 		
 	}
 	

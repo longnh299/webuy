@@ -1,4 +1,4 @@
-package com.webuy.admin.user;
+package com.webuy.admin.user.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,6 +23,8 @@ import com.webuy.admin.FileUploadedUtil;
 import com.webuy.admin.export.CsvExport;
 import com.webuy.admin.export.ExcelExport;
 import com.webuy.admin.export.PdfExport;
+import com.webuy.admin.user.UserNotFoundException;
+import com.webuy.admin.user.UserService;
 import com.webuy.common.entity.Role;
 import com.webuy.common.entity.User;
 
@@ -59,7 +61,7 @@ public class UserController {
 		model.addAttribute("newUser", newUser);
 		model.addAttribute("listRoles", listRoles);
 		model.addAttribute("pageTitle", "Create new user");
-		return "new_user_form";
+		return "/user-template/new_user_form";
 	}
 	
 	//save user controller
@@ -96,7 +98,7 @@ public class UserController {
 			model.addAttribute("newUser", user);
 			model.addAttribute("pageTitle", "Edit user has ID: " + id);
 			model.addAttribute("listRoles", listRoles);
-			return "new_user_form";
+			return "/user-template/new_user_form";
 		} catch (UserNotFoundException e) {
 			// TODO: handle exception
 			redirectAttributes.addFlashAttribute("message", e.getMessage());
@@ -175,7 +177,7 @@ public class UserController {
 		model.addAttribute("reverseSortDir", reverseSortDir);
 		model.addAttribute("keyword", keyword);
 		
-		return "users";
+		return "/user-template/users";
 	}
 	
 	// export to csv controller
