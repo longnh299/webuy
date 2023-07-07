@@ -3,15 +3,14 @@
 	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head th:replace="~{fragments :: page_header('Home-Webuy Admin')}">
 	
-	<body>
+</head>
+<!-- error 403, 404, 500-->
+<body>
 		<div class="container-fluid">
 			<div th:replace="~{nav :: menu}"></div>
 			
 			<div>
-				<h1>Welcome to webuy admin</h1>
-				Welcome <a sec:authentication="principal.Fullname" th:href="@{/account}"></a>
-				&nbsp;
-				<span sec:authentication="principal.authorities"></span>
+				<h1>Sorry, the server has encountered an error while processing your request</h1>
 			</div>
 			
 			<div class="text-center">
@@ -19,6 +18,5 @@
 			</div>
 			
 		</div>
-		
-	</body>
-</html>
+</body>
+
