@@ -1,0 +1,360 @@
+2023-07-07T17:24:39.370+07:00  INFO 36196 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Starting WebuyBackEndApplication using Java 17.0.7 with PID 36196 (/home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd/target/classes started by autumn in /home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd)
+2023-07-07T17:24:39.370+07:00  INFO 36196 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T17:24:39.461+07:00  INFO 36196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T17:24:39.466+07:00  INFO 36196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-07-07T17:24:39.530+07:00  INFO 36196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T17:24:39.531+07:00  INFO 36196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T17:24:39.531+07:00  INFO 36196 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-07T17:24:39.537+07:00  INFO 36196 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring embedded WebApplicationContext
+2023-07-07T17:24:39.537+07:00  INFO 36196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 165 ms
+2023-07-07T17:24:39.570+07:00  INFO 36196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T17:24:39.577+07:00  INFO 36196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:24:39.577+07:00  INFO 36196 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T17:24:39.578+07:00  INFO 36196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-07-07T17:24:39.589+07:00  INFO 36196 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b5bb91d
+2023-07-07T17:24:39.589+07:00  INFO 36196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-07-07T17:24:39.590+07:00  INFO 36196 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-07T17:24:39.590+07:00  WARN 36196 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-07T17:24:39.599+07:00  INFO 36196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:24:39.630+07:00  INFO 36196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T17:24:39.660+07:00  INFO 36196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:24:39.730+07:00  WARN 36196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T17:24:39.745+07:00  INFO 36196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-07T17:24:39.949+07:00  INFO 36196 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@876db73, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66823814, org.springframework.security.web.context.SecurityContextHolderFilter@23f0630f, org.springframework.security.web.header.HeaderWriterFilter@3d6ba93c, org.springframework.security.web.csrf.CsrfFilter@4fd09585, org.springframework.security.web.authentication.logout.LogoutFilter@4447e571, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3765b0fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68c7a649, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44d7118, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@253ca505, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c7ab65e, org.springframework.security.web.access.ExceptionTranslationFilter@64c114f5, org.springframework.security.web.access.intercept.AuthorizationFilter@191ee081]
+2023-07-07T17:24:39.952+07:00  WARN 36196 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:24:39.952+07:00  INFO 36196 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/images/**']
+2023-07-07T17:24:39.952+07:00  WARN 36196 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:24:39.952+07:00  INFO 36196 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2023-07-07T17:24:39.952+07:00  WARN 36196 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:24:39.952+07:00  INFO 36196 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/webjars/**']
+2023-07-07T17:24:39.999+07:00  INFO 36196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-07T17:24:40.009+07:00  INFO 36196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/WebuyAdmin'
+2023-07-07T17:24:40.014+07:00  INFO 36196 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Started WebuyBackEndApplication in 0.678 seconds (process running for 451.617)
+2023-07-07T17:24:40.016+07:00  INFO 36196 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-07T17:25:02.061+07:00  INFO 36196 --- [RMI TCP Connection(23)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-07-07T17:25:02.066+07:00  INFO 36196 --- [RMI TCP Connection(23)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-07T17:25:02.082+07:00  INFO 36196 --- [RMI TCP Connection(23)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:25:02.082+07:00  INFO 36196 --- [RMI TCP Connection(23)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-07-07T17:25:02.085+07:00  INFO 36196 --- [RMI TCP Connection(23)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-07-07T17:25:03.476+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Starting WebuyBackEndApplication using Java 17.0.7 with PID 37667 (/home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd/target/classes started by autumn in /home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd)
+2023-07-07T17:25:03.478+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T17:25:03.520+07:00  INFO 37667 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07T17:25:03.521+07:00  INFO 37667 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07T17:25:03.985+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T17:25:04.030+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2023-07-07T17:25:04.493+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T17:25:04.501+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T17:25:04.501+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-07T17:25:04.549+07:00  INFO 37667 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring embedded WebApplicationContext
+2023-07-07T17:25:04.550+07:00  INFO 37667 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1028 ms
+2023-07-07T17:25:04.683+07:00  INFO 37667 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T17:25:04.721+07:00  INFO 37667 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-07-07T17:25:04.723+07:00  INFO 37667 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-07T17:25:04.837+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:25:04.934+07:00  INFO 37667 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T17:25:04.948+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-07T17:25:05.224+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@781dfcee
+2023-07-07T17:25:05.226+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-07T17:25:05.261+07:00  INFO 37667 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-07T17:25:05.262+07:00  WARN 37667 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-07T17:25:05.446+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:25:05.916+07:00  INFO 37667 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T17:25:05.974+07:00  INFO 37667 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:25:06.157+07:00  INFO 37667 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-07T17:25:06.574+07:00  WARN 37667 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T17:25:06.665+07:00  INFO 37667 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-07T17:25:07.013+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65f86ff1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d456498, org.springframework.security.web.context.SecurityContextHolderFilter@4940fcb6, org.springframework.security.web.header.HeaderWriterFilter@747495f3, org.springframework.security.web.csrf.CsrfFilter@51bb4b4, org.springframework.security.web.authentication.logout.LogoutFilter@3c1b70c4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a69e7b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b54e78d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@633be4d2, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@59979411, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1897503d, org.springframework.security.web.access.ExceptionTranslationFilter@6af59347, org.springframework.security.web.access.intercept.AuthorizationFilter@12358cf7]
+2023-07-07T17:25:07.017+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:25:07.017+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/images/**']
+2023-07-07T17:25:07.017+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:25:07.017+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2023-07-07T17:25:07.017+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:25:07.017+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/webjars/**']
+2023-07-07T17:25:07.189+07:00  INFO 37667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-07T17:25:07.217+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/WebuyAdmin'
+2023-07-07T17:25:07.225+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Started WebuyBackEndApplication in 4.033 seconds (process running for 4.624)
+2023-07-07T17:31:15.724+07:00  INFO 37667 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-07T17:31:15.738+07:00  INFO 37667 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-07T17:31:15.756+07:00  INFO 37667 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:31:15.762+07:00  INFO 37667 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-07T17:31:15.774+07:00  INFO 37667 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-07T17:31:15.843+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Starting WebuyBackEndApplication using Java 17.0.7 with PID 37667 (/home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd/target/classes started by autumn in /home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd)
+2023-07-07T17:31:15.843+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T17:31:15.961+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T17:31:15.968+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-07-07T17:31:16.057+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T17:31:16.057+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T17:31:16.057+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-07T17:31:16.063+07:00  INFO 37667 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring embedded WebApplicationContext
+2023-07-07T17:31:16.063+07:00  INFO 37667 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 217 ms
+2023-07-07T17:31:16.095+07:00  INFO 37667 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T17:31:16.100+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:31:16.100+07:00  INFO 37667 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T17:31:16.101+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-07-07T17:31:16.111+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38a61838
+2023-07-07T17:31:16.111+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-07-07T17:31:16.112+07:00  INFO 37667 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-07T17:31:16.112+07:00  WARN 37667 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-07T17:31:16.120+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:31:16.150+07:00  INFO 37667 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T17:31:16.175+07:00  INFO 37667 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:31:16.245+07:00  WARN 37667 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T17:31:16.263+07:00  INFO 37667 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-07T17:31:16.433+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35948a63, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18f2e134, org.springframework.security.web.context.SecurityContextHolderFilter@638cffbd, org.springframework.security.web.header.HeaderWriterFilter@6986fa7e, org.springframework.security.web.csrf.CsrfFilter@23c8da0e, org.springframework.security.web.authentication.logout.LogoutFilter@5b810356, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@153bb6fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f14168, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d89d0de, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@a5838b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@503600bf, org.springframework.security.web.access.ExceptionTranslationFilter@1263320a, org.springframework.security.web.access.intercept.AuthorizationFilter@64b92e53]
+2023-07-07T17:31:16.435+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:31:16.436+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/images/**']
+2023-07-07T17:31:16.436+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:31:16.436+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2023-07-07T17:31:16.436+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:31:16.436+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/webjars/**']
+2023-07-07T17:31:16.485+07:00  INFO 37667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-07T17:31:16.494+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/WebuyAdmin'
+2023-07-07T17:31:16.498+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Started WebuyBackEndApplication in 0.68 seconds (process running for 373.897)
+2023-07-07T17:31:16.501+07:00  INFO 37667 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-07T17:38:33.156+07:00  INFO 37667 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-07T17:38:33.158+07:00  INFO 37667 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-07T17:38:33.162+07:00  INFO 37667 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:38:33.163+07:00  INFO 37667 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-07-07T17:38:33.166+07:00  INFO 37667 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-07-07T17:38:33.227+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Starting WebuyBackEndApplication using Java 17.0.7 with PID 37667 (/home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd/target/classes started by autumn in /home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd)
+2023-07-07T17:38:33.227+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T17:38:33.332+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T17:38:33.340+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-07-07T17:38:33.406+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T17:38:33.407+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T17:38:33.407+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-07T17:38:33.412+07:00  INFO 37667 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring embedded WebApplicationContext
+2023-07-07T17:38:33.412+07:00  INFO 37667 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 183 ms
+2023-07-07T17:38:33.444+07:00  INFO 37667 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T17:38:33.448+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:38:33.449+07:00  INFO 37667 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T17:38:33.449+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-07-07T17:38:33.457+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c66f43
+2023-07-07T17:38:33.457+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-07-07T17:38:33.458+07:00  INFO 37667 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-07T17:38:33.458+07:00  WARN 37667 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-07T17:38:33.467+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:38:33.492+07:00  INFO 37667 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T17:38:33.507+07:00  INFO 37667 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:38:33.563+07:00  WARN 37667 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T17:38:33.576+07:00  INFO 37667 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-07T17:38:33.716+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1835173d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b5c9be0, org.springframework.security.web.context.SecurityContextHolderFilter@189e6c87, org.springframework.security.web.header.HeaderWriterFilter@393365c2, org.springframework.security.web.csrf.CsrfFilter@64e9b00b, org.springframework.security.web.authentication.logout.LogoutFilter@1a1b7b1e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5004f17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@315eee77, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53b5a92d, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@44821722, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ca3016b, org.springframework.security.web.access.ExceptionTranslationFilter@60c90a9, org.springframework.security.web.access.intercept.AuthorizationFilter@22f2351e]
+2023-07-07T17:38:33.718+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:38:33.718+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/images/**']
+2023-07-07T17:38:33.718+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:38:33.718+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2023-07-07T17:38:33.719+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:38:33.719+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/webjars/**']
+2023-07-07T17:38:33.774+07:00  INFO 37667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-07T17:38:33.783+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/WebuyAdmin'
+2023-07-07T17:38:33.787+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Started WebuyBackEndApplication in 0.581 seconds (process running for 811.186)
+2023-07-07T17:38:33.789+07:00  INFO 37667 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-07T17:39:44.390+07:00  INFO 37667 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-07T17:39:44.398+07:00  INFO 37667 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-07T17:39:44.406+07:00  INFO 37667 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:39:44.408+07:00  INFO 37667 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-07-07T17:39:44.415+07:00  INFO 37667 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-07-07T17:39:44.485+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Starting WebuyBackEndApplication using Java 17.0.7 with PID 37667 (/home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd/target/classes started by autumn in /home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd)
+2023-07-07T17:39:44.485+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T17:39:44.576+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T17:39:44.581+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-07-07T17:39:44.646+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T17:39:44.646+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T17:39:44.646+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-07T17:39:44.652+07:00  INFO 37667 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring embedded WebApplicationContext
+2023-07-07T17:39:44.652+07:00  INFO 37667 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 166 ms
+2023-07-07T17:39:44.685+07:00  INFO 37667 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T17:39:44.690+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:39:44.690+07:00  INFO 37667 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T17:39:44.690+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-07-07T17:39:44.698+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f0e0a1
+2023-07-07T17:39:44.699+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-07-07T17:39:44.699+07:00  INFO 37667 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-07T17:39:44.699+07:00  WARN 37667 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-07T17:39:44.706+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:39:44.730+07:00  INFO 37667 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T17:39:44.744+07:00  INFO 37667 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:39:44.796+07:00  WARN 37667 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T17:39:44.809+07:00  INFO 37667 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-07T17:39:44.957+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e374d25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c133a9d, org.springframework.security.web.context.SecurityContextHolderFilter@4ece72ff, org.springframework.security.web.header.HeaderWriterFilter@3aa430c0, org.springframework.security.web.csrf.CsrfFilter@4e57ce46, org.springframework.security.web.authentication.logout.LogoutFilter@7b97ef9d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b4b0c3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e9ba09e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d4a3d6f, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@f64f9cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7faae1cf, org.springframework.security.web.access.ExceptionTranslationFilter@54f6f88a, org.springframework.security.web.access.intercept.AuthorizationFilter@14c6d816]
+2023-07-07T17:39:44.960+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:39:44.960+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/images/**']
+2023-07-07T17:39:44.960+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:39:44.960+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2023-07-07T17:39:44.960+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:39:44.960+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/webjars/**']
+2023-07-07T17:39:45.003+07:00  INFO 37667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-07T17:39:45.011+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/WebuyAdmin'
+2023-07-07T17:39:45.015+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Started WebuyBackEndApplication in 0.547 seconds (process running for 882.414)
+2023-07-07T17:39:45.016+07:00  INFO 37667 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-07T17:40:41.879+07:00  INFO 37667 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07T17:40:41.881+07:00  INFO 37667 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-07T17:40:41.882+07:00  INFO 37667 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-07T17:42:40.145+07:00 ERROR 37667 --- [http-nio-8080-exec-2] com.webuy.admin.FileUploadedUtil         : Colud not list directory: user-photos/22
+2023-07-07T17:44:19.242+07:00  INFO 37667 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-07T17:44:19.247+07:00  INFO 37667 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-07T17:44:19.249+07:00  INFO 37667 --- [Thread-15] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-07T17:44:19.275+07:00  WARN 37667 --- [Thread-15] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Cannot serialize session attribute [SPRING_SECURITY_CONTEXT] for session [2118E1CC99208579A77F22421C014933]
+
+java.io.NotSerializableException: com.webuy.common.entity.User
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1187) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350) ~[na:na]
+	at org.apache.catalina.session.StandardSession.doWriteObject(StandardSession.java:1625) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:1050) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:317) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:268) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardManager.stopInternal(StandardManager.java:384) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5121) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:936) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:936) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:491) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:966) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:495) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.stop(WebServerStartStopLifecycle.java:53) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.context.SmartLifecycle.stop(SmartLifecycle.java:117) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:234) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:373) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:206) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:129) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1027) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:308) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:250) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:614) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+
+2023-07-07T17:44:19.284+07:00  INFO 37667 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:44:19.284+07:00  INFO 37667 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-07-07T17:44:19.287+07:00  INFO 37667 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-07-07T17:44:19.350+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Starting WebuyBackEndApplication using Java 17.0.7 with PID 37667 (/home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd/target/classes started by autumn in /home/autumn/Documents/workspace-spring-tool-suite-4-4.18.1.RELEASE/WebuyProject/WebuyWebParent/WebuyBackEnd)
+2023-07-07T17:44:19.350+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-07-07T17:44:19.470+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07T17:44:19.475+07:00  INFO 37667 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-07-07T17:44:19.566+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-07T17:44:19.566+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-07T17:44:19.567+07:00  INFO 37667 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-07-07T17:44:19.574+07:00  INFO 37667 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring embedded WebApplicationContext
+2023-07-07T17:44:19.575+07:00  INFO 37667 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 222 ms
+2023-07-07T17:44:19.599+07:00  WARN 37667 --- [restartedMain] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [2118E1CC99208579A77F22421C014933]
+2023-07-07T17:44:19.633+07:00  INFO 37667 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07T17:44:19.642+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:44:19.642+07:00  INFO 37667 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-07T17:44:19.644+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-07-07T17:44:19.658+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10ed7b7f
+2023-07-07T17:44:19.658+07:00  INFO 37667 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-07-07T17:44:19.659+07:00  INFO 37667 --- [restartedMain] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-07T17:44:19.659+07:00  WARN 37667 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-07T17:44:19.673+07:00  INFO 37667 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-07T17:44:19.700+07:00  INFO 37667 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07T17:44:19.717+07:00  INFO 37667 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:44:19.791+07:00  WARN 37667 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07T17:44:19.810+07:00  INFO 37667 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-07T17:44:20.012+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16388bda, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@664de877, org.springframework.security.web.context.SecurityContextHolderFilter@207251f6, org.springframework.security.web.header.HeaderWriterFilter@72150cbd, org.springframework.security.web.csrf.CsrfFilter@24303f34, org.springframework.security.web.authentication.logout.LogoutFilter@2fbd1dfa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@666531bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51e0353, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32a91a60, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@d559c4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29ead5da, org.springframework.security.web.access.ExceptionTranslationFilter@510cc199, org.springframework.security.web.access.intercept.AuthorizationFilter@58a5140e]
+2023-07-07T17:44:20.016+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:44:20.017+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/images/**']
+2023-07-07T17:44:20.017+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:44:20.017+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2023-07-07T17:44:20.017+07:00  WARN 37667 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-07-07T17:44:20.017+07:00  INFO 37667 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/webjars/**']
+2023-07-07T17:44:20.096+07:00  INFO 37667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-07T17:44:20.107+07:00  INFO 37667 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/WebuyAdmin'
+2023-07-07T17:44:20.112+07:00  INFO 37667 --- [restartedMain] c.webuy.admin.WebuyBackEndApplication    : Started WebuyBackEndApplication in 0.784 seconds (process running for 1157.511)
+2023-07-07T17:44:20.118+07:00  INFO 37667 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-07T17:44:49.245+07:00  INFO 37667 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07T17:44:49.245+07:00  INFO 37667 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-07T17:44:49.247+07:00  INFO 37667 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-07T17:46:24.825+07:00  INFO 37667 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-07-07T17:46:24.829+07:00  INFO 37667 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-07T17:46:24.829+07:00  INFO 37667 --- [Thread-19] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-07T17:46:24.831+07:00  WARN 37667 --- [Thread-19] o.a.c.c.C.[.[localhost].[/WebuyAdmin]    : Cannot serialize session attribute [SPRING_SECURITY_CONTEXT] for session [CD8BC77C55A092DB51BA56A07C29CEFE]
+
+java.io.NotSerializableException: com.webuy.common.entity.User
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1187) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1572) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1529) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1438) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1181) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350) ~[na:na]
+	at org.apache.catalina.session.StandardSession.doWriteObject(StandardSession.java:1625) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardSession.writeObjectData(StandardSession.java:1050) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:317) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardManager.unload(StandardManager.java:268) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.session.StandardManager.stopInternal(StandardManager.java:384) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5121) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:936) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:936) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:491) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:966) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:495) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:273) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stop(TomcatWebServer.java:331) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.stop(WebServerStartStopLifecycle.java:53) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.context.SmartLifecycle.stop(SmartLifecycle.java:117) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:234) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:373) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:206) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:129) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1069) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.1.0.jar:3.1.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1027) ~[spring-context-6.0.9.jar:6.0.9]
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:308) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:250) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:614) ~[spring-boot-devtools-3.1.0.jar:3.1.0]
+
+2023-07-07T17:46:24.842+07:00  INFO 37667 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07T17:46:24.843+07:00  INFO 37667 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-07-07T17:46:24.849+07:00  INFO 37667 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
