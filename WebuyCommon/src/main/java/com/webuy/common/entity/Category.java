@@ -1,0 +1,121 @@
+package com.webuy.common.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name = "categories")
+public class Category {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	@Column(unique = true, nullable = false)
+	private String name;
+	
+	@Column(unique = true, nullable = false)
+	private String alias;
+	
+	@Column(nullable = false)
+	private String image;
+	
+	private boolean enabled;
+	
+	@OneToOne
+	@JoinColumn(name = "parentCategory_id")
+	private Category parentCategory;
+	
+	@OneToMany(mappedBy = "parentCategory")
+	private Set<Category> subCategory = new HashSet<>();
+	
+	
+
+	public Category(String name, String alias, String image, boolean enabled, Category parentCategory) {
+		this.name = name;
+		this.alias = alias;
+		this.image = image;
+		this.enabled = enabled;
+		this.parentCategory = parentCategory;
+	}
+	
+	
+
+	public Category() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public Category getParentCategory() {
+		return parentCategory;
+	}
+
+	public void setParentCategory(Category parentCategory) {
+		this.parentCategory = parentCategory;
+	}
+
+	public Set<Category> getSubCategory() {
+		return subCategory;
+	}
+
+	public void setSubCategory(Set<Category> subCategory) {
+		this.subCategory = subCategory;
+	}
+	
+	
+	
+
+
+}
