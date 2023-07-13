@@ -3,12 +3,15 @@ package com.webuy.common.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -33,7 +36,7 @@ public class Category {
 	
 	private boolean enabled;
 	
-	@OneToOne
+	@ManyToOne // change @OneToOne to @ManyToOne to fix unique constraint in parent_category_id
 	@JoinColumn(name = "parentCategory_id")
 	private Category parentCategory;
 	
@@ -55,7 +58,21 @@ public class Category {
 	public Category() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Category(Integer id) {
+		this.id = id;
+	}
 
+	public Category(String alias ,String name, String image) {
+		this.alias = alias;
+		this.name = name;
+		this.image = image;
+	}
+	
+	public Category(String alias, String name, String image, Category parentCategory) {
+		this(alias, name, image);
+		this.parentCategory = parentCategory;
+	}
 
 
 	public Integer getId() {
