@@ -69,6 +69,12 @@ public class Category {
 		this.image = image;
 	}
 	
+	public Category(String name) {
+		this.alias = name;
+		this.name = name;
+		this.image = "default.png";
+	}
+	
 	public Category(String alias, String name, String image, Category parentCategory) {
 		this(alias, name, image);
 		this.parentCategory = parentCategory;

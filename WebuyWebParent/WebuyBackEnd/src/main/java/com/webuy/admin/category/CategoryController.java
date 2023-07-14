@@ -30,4 +30,19 @@ public class CategoryController {
 		return "/category-template/category";
 		
 	}
+	
+	// add new category controller
+	@GetMapping("/categories/new")
+	public String createNewCategory(Model model) {
+		
+		List<Category> listCategories = categoryService.listCategoriesForm();
+		String pageTitle = "Create a new category";
+		Category category = new Category();
+		model.addAttribute("pageTitle", pageTitle);
+		model.addAttribute("category", category);
+		model.addAttribute("listCategories", listCategories);
+		
+		
+		return "/category-template/new_category_form";
+	}
 }
