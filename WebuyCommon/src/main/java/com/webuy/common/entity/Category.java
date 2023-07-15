@@ -75,6 +75,30 @@ public class Category {
 		this.image = "default.png";
 	}
 	
+	public Category(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+		
+	}
+	
+	public static Category transferIdAndName(Category category) {
+		Category categoryCopy = new Category();
+		
+		categoryCopy.setId(category.getId());
+		categoryCopy.setName(category.getName());
+		
+		return categoryCopy;
+	}
+	
+	public static Category transferIdAndNameSymbol(Integer id, String name) {
+		Category categoryCopySymBol = new Category();
+		
+		categoryCopySymBol.setId(id);
+		categoryCopySymBol.setName(name);
+		
+		return categoryCopySymBol;
+	}
+	
 	public Category(String alias, String name, String image, Category parentCategory) {
 		this(alias, name, image);
 		this.parentCategory = parentCategory;

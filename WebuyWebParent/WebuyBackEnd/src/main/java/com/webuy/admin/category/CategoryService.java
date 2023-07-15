@@ -31,12 +31,12 @@ public class CategoryService {
 		for(Category category : categoriesInDatabase) {
 			if(category.getParentCategory() == null) {
 				//System.out.println(category.getName()); //root category
-				categoriesInForm.add(new Category(category.getName()));
+				categoriesInForm.add(Category.transferIdAndName(category));
 				
 				Set<Category> childrenCategories = category.getSubCategory();
 				
 				for(Category sub : childrenCategories) {
-					categoriesInForm.add(new Category("--" + sub.getName()));
+					categoriesInForm.add(Category.transferIdAndNameSymbol(sub.getId(), "--" + sub.getName()));
 					showChild(categoriesInForm, sub, 1);
 				}
 			}
@@ -53,11 +53,15 @@ public class CategoryService {
 			for(int i = 0; i < newSubLevel; i++) {
 				symbol += "--";
 			}
-			categoriesInForm.add(new Category(symbol + sub.getName()));
+			categoriesInForm.add(Category.transferIdAndNameSymbol(sub.getId(), symbol + sub.getName()));
 			
 			showChild(categoriesInForm, sub, newSubLevel);
 			
 		}
 	}
-
+	
+	//save category service
+	public Category saveCategory(Category category) {
+		return categoryRepository.save(category);
+	}
 }
