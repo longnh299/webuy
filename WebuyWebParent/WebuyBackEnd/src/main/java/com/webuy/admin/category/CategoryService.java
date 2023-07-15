@@ -19,7 +19,47 @@ public class CategoryService {
 	
 	//get all category service
 	public List<Category> listAllCategories(){
-		return (List<Category>) categoryRepository.findAll();
+		//return (List<Category>) categoryRepository.findAll();
+		List<Category> parentCategories = categoryRepository.listParentCategories();
+		return listHierarCategories(parentCategories);
+	}
+	
+	public List<Category> listHierarCategories(List<Category> parentCategories){
+		
+		List<Category> categoriesInHierar = new ArrayList<>();
+		//Iterable<Category> categoriesInDatabase = categoryRepository.findAll();
+		
+		for(Category parentCategory : parentCategories) {
+			
+			categoriesInHierar.add(Category.copyFullCategoryInfo(parentCategory));
+			
+			Set<Category> subCategories = parentCategory.getSubCategory();
+			for(Category sub : subCategories) {
+				String nameWithSymbol = "--" + sub.getName();
+				categoriesInHierar.add(Category.copyFullCategoryInfo(sub, nameWithSymbol));
+				
+				listSubHierarchicalCategories(sub, 1, categoriesInHierar);
+			}
+			
+		}
+		
+		return categoriesInHierar;
+	}
+	
+	public void listSubHierarchicalCategories(Category parentCategory, int subLevel, List<Category> categoriesInHierar) {
+		Set<Category> subCategories = parentCategory.getSubCategory();
+		int newSubLevel = subLevel + 1;
+		
+		for(Category sub : subCategories) {
+			String symbol = "";
+			for(int i = 0; i < newSubLevel; i++) {
+				symbol += "--";
+			}
+			symbol += sub.getName();
+			categoriesInHierar.add(Category.copyFullCategoryInfo(sub, symbol));
+			
+			listSubHierarchicalCategories(sub, newSubLevel, categoriesInHierar);
+		}
 	}
 	
 	//list categories use in vew_category_form.html service 

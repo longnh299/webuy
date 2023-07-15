@@ -63,7 +63,7 @@
 							<td class="hide-column">[[${category.id}]]</td>
 							<td>
 								<span th:if="${category.image == null}" class="fas fa-portrait fa-3x icon-dark"></span>
-								<!--<img th:if="${category.image != null}" th:src="@{${category.imagePath}}" /> -->
+								<img th:if="${category.image != null}" th:src="@{${category.imagePath}}" style="width: 100px;"/>
 							</td>
 							<td class="hide-column">[[${category.name}]]</td>
 							<td>[[${category.alias}]]</td> <!-- property name is entity class propertice -->

@@ -88,21 +88,30 @@ public class CategoryRepositoryTests {
 //		
 //	}
 	
+//	@Test
+//	public void testGetHierarchicalCategories() {
+//		Iterable<Category> categories = categoryRepository.findAll();
+//		
+//		for(Category category : categories) {
+//			if(category.getParentCategory() == null) {
+//				System.out.println(category.getName()); //root category
+//				
+//				Set<Category> childrenCategories = category.getSubCategory();
+//				
+//				for(Category sub : childrenCategories) {
+//					System.out.println("--" + sub.getName());
+//					showChild(sub, 1);
+//				}
+//			}
+//		}
+//	}
+	
 	@Test
-	public void testGetHierarchicalCategories() {
-		Iterable<Category> categories = categoryRepository.findAll();
+	public void testListRootCategories() {
+		List<Category> listParentCategories = categoryRepository.listParentCategories();
 		
-		for(Category category : categories) {
-			if(category.getParentCategory() == null) {
-				System.out.println(category.getName()); //root category
-				
-				Set<Category> childrenCategories = category.getSubCategory();
-				
-				for(Category sub : childrenCategories) {
-					System.out.println("--" + sub.getName());
-					showChild(sub, 1);
-				}
-			}
+		for(Category category : listParentCategories) {
+			System.out.println(category.getName());
 		}
 	}
 	
